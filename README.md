@@ -1,7 +1,15 @@
 # Abstract Factory
 QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスを、"testing"を入れればTestingFactoryのインスタンスを返します。         
-QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドでFindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。      
+QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドでFindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。       
+FindQuestionCommandのgetQuestion(int id)メソッドでNode.jsサーバの"{SERVER_APP_HOME}/run/quesions.json"または"{SERVER_APP_HOME}/test/questions.json"をパーシングして問題の情報を返します。         
+SendAnswersCommandのsendAnswer(String userName, String answer, int id)メソッドでNode.jsサーバの{SERVER_APP_HOME}/run/answers.json"または{SERVER_APP_HOME}/test/answers.json"に回答を記録し、回答が正しいかが戻されます。
 
+## Getting Start
+1. Javaのcom.googlecode.json-simpleライブラリを追加
+2. ライブラリをクラスパスに追加
+3. Javaファイルをコンパイルする
+4. Node.jsでserver.jsを実行
+5. JavaでTest.javaを実行
 
 ## Runtime Environment
 "/node.js server/server.js" running on Node.js 12.13.1        
