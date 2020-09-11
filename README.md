@@ -7,7 +7,7 @@
 ## Component
 
 ### Maven Dependency (For JSON)
-    [Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
+[Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
 <pre>
 &ltdependency&gt    
   &ltgroupId&gtcom.googlecode.json-simple&lt/groupId&gt    
