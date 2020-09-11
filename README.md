@@ -1,4 +1,10 @@
 # Abstract Factory
+| QuestionFactory | RunningFactory | TestingFactory |
+| ---------- | -------------- | -------------- |
+| SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand |
+| FindQuestionCommand | RunningFindQuestionCommand | TestingFindQuestionCommand |
+
+
 QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスを、"testing"を入れればTestingFactoryのインスタンスを返します。         
 QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドでFindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。       
 FindQuestionCommandのgetQuestion(int id)メソッドでNode.jsサーバの"{SERVER_APP_HOME}/run/quesions.json"または"{SERVER_APP_HOME}/test/questions.json"をパーシングして問題の情報を返します。         
