@@ -6,7 +6,7 @@
 
 ## Component
 
-### Maven Dependency (For JSON)
+### Maven Dependency (For JSON jar Library)
 [Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
 <pre>
 &ltdependency&gt    
