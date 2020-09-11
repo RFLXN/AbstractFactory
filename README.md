@@ -1,6 +1,6 @@
 # Abstract Factory
-QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスが、     "testing"を入れればTestingFactoryのインスタンスを返します。         
-QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドで      FindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。      
+QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスを、"testing"を入れればTestingFactoryのインスタンスを返します。         
+QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドでFindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。      
 
 
 ## Runtime Environment
@@ -10,6 +10,7 @@ QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion()
 ## Component
 
 ### Maven Dependency (For JSON jar Library)
+FindQuestionCommandのコンパイルをために以下のライブラリをクラスパスに追加してください。      
 [Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
 <pre>
 &ltdependency&gt    
