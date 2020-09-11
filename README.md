@@ -1,5 +1,5 @@
 # Abstract Factory
-| QuestionFactory | RunningFactory | TestingFactory | Total 11 Java Files |
+| QuestionFactory | RunningFactory | TestingFactory | Total 11 Java Classes |
 | --------------- | -------------- | -------------- | ------------------- |
 | SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand | (Test.java) |
 | FindQuestionCommand | RunningFindQuestionCommand | TestingFindQuestionCommand | (Question) |
