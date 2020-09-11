@@ -13,12 +13,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class FindQuestionCommand {
+    // 問題のIDで問題を検索して、その問題をもらう
     public abstract Question getQuestion(int id);
 
+    // もらった問題のIDが正しいならtrueを返す
     protected boolean isIdCorrect(int id, Map<Integer, Question> list) {
         return list.containsKey(id);
     }
 
+    // 問題のMapコレクションを返す
     protected Map<Integer, Question> getQuestionsMap(String url) {
         HashMap<Integer, Question> questionMap = new HashMap<>();
 
@@ -39,6 +42,7 @@ public abstract class FindQuestionCommand {
         return questionMap;
     }
 
+    // JSONデータをパーシングする
     private JSONObject parseJson(String url) {
         String rawData = getFileFromServer(url);
         JSONObject jsonObject = null;
@@ -53,6 +57,7 @@ public abstract class FindQuestionCommand {
         return jsonObject;
     }
 
+    // サーバからデータをもらう
     private String getFileFromServer(String url) {
         String rawData = "";
 

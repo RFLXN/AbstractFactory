@@ -13,9 +13,9 @@ public class Test {
         FindQuestionCommand findQuestionCommand = factory.createFindingQuestion();
         SendAnswersCommand sendAnswersCommand = factory.createSendingAnswers();
 
-        Question question = findQuestionCommand.getQuestion(2);
-
-        System.out.println("Question ID : " + question.getId());
+        System.out.print("Input Question ID : ");
+        String id = input.nextLine();
+        Question question = findQuestionCommand.getQuestion(Integer.parseInt(id));
         System.out.println("Question Content : " + question.getQuestionContent());
         System.out.print("Insert Your Answer : ");
         String answer = input.nextLine();

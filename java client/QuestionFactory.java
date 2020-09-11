@@ -3,7 +3,7 @@ import questionfind.FindQuestionCommand;
 
 import java.util.HashMap;
 
-public abstract class QuestionFactory {
+public abstract class QuestionFactory {         // AbstractFactory
     private static HashMap<String, QuestionFactory> factoryMap = new HashMap<>();
 
     public static QuestionFactory getFactory(String key) {

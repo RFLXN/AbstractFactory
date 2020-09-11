@@ -7,8 +7,10 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public abstract class SendAnswersCommand {
+    // 回答を送ってその回答が正解であればtrueを返す目的の抽象メソッド
     public abstract boolean sendAnswer(String userName, String answer, int targetQuestionId);
 
+    // urlをパラメータをつけて加工
     protected String processUrl(String userName, String answer, int targetQuestionId, String url) {
         String resultUrl = url;
         try {
@@ -25,6 +27,7 @@ public abstract class SendAnswersCommand {
         return resultUrl;
     }
 
+    // urlへGETメソッドでリクエストする
     protected String sendHttpRequest(String url) {
         String rawData = "";
         try {
