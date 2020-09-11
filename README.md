@@ -1,4 +1,5 @@
 # Abstract Factory
+## Java
 | QuestionFactory | RunningFactory | TestingFactory | Total 11 Java Classes |
 | --------------- | -------------- | -------------- | ------------------- |
 | SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand | (Test.java) |
@@ -9,6 +10,15 @@
 * QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドでFindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。       
 * FindQuestionCommandのgetQuestion(int id)メソッドでNode.jsサーバの"{SERVER_APP_HOME}/run/quesions.json"または"{SERVER_APP_HOME}/test/questions.json"をパーシングして問題の情報を返します。         
 * SendAnswersCommandのsendAnswer(String userName, String answer, int id)メソッドでNode.jsサーバの{SERVER_APP_HOME}/run/answers.json"または{SERVER_APP_HOME}/test/answers.json"に回答を記録し、回答が正しいかが戻されます。
+
+## Node.js (JavaScript)
+* Node.jsのhttpモジュールでサーバを定義
+* "/run/questions.json"または"/test/questions.json"パスのリクエストをもらった場合
+  * readFile(path)関数でJSONファイルを読み込んでクライアントに返す
+* "/run/answer"または"/test/answer"パスのリクエストをもらった場合
+  * 3つのパラメータ (user -> userName, targer -> targetQuestionId, answer -> answer)
+  * パラメータをconvertToAnswerObject(userName, targetQuestionId, answer)関数に加工してprocessJson(path, data)関数でanswers.jsonに保存
+  * readFile(path)関数で元のJSONファイルのデータを読み込んでパラメータと比較して結果を返す
 
 ## Getting Started
 1. Javaのcom.googlecode.json-simpleライブラリを追加
