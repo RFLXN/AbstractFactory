@@ -1,8 +1,8 @@
 # Abstract Factory
-| QuestionFactory | RunningFactory | TestingFactory |
-| ---------- | -------------- | -------------- |
-| SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand |
-| FindQuestionCommand | RunningFindQuestionCommand | TestingFindQuestionCommand |
+| QuestionFactory | RunningFactory | TestingFactory | Total 11 Java Files |
+| --------------- | -------------- | -------------- | ------------------- |
+| SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand | (Test.java) |
+| FindQuestionCommand | RunningFindQuestionCommand | TestingFindQuestionCommand | (Question) |
 
 
 * QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスを、"testing"を入れればTestingFactoryのインスタンスを返します。         
