@@ -10,7 +10,7 @@
 * FindQuestionCommandのgetQuestion(int id)メソッドでNode.jsサーバの"{SERVER_APP_HOME}/run/quesions.json"または"{SERVER_APP_HOME}/test/questions.json"をパーシングして問題の情報を返します。         
 * SendAnswersCommandのsendAnswer(String userName, String answer, int id)メソッドでNode.jsサーバの{SERVER_APP_HOME}/run/answers.json"または{SERVER_APP_HOME}/test/answers.json"に回答を記録し、回答が正しいかが戻されます。
 
-## Getting Start
+## Getting Started
 1. Javaのcom.googlecode.json-simpleライブラリを追加
 2. ライブラリをクラスパスに追加
 3. Javaファイルをコンパイルする
