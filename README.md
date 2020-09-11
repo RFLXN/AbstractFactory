@@ -18,7 +18,7 @@ SendAnswersCommandのsendAnswer(String userName, String answer, int id)メソッ
 ## Component
 
 ### Maven Dependency (For JSON jar Library)
-FindQuestionCommandのコンパイルをために以下のライブラリをクラスパスに追加してください。      
+FindQuestionCommandのコンパイルのために以下のライブラリをクラスパスに追加してください。      
 [Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
 <pre>
 &ltdependency&gt    
