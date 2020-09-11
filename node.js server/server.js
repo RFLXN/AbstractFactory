@@ -2,22 +2,22 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const server = http.createServer((request, response) => {
+const server = http.createServer((request, response) => {       // サーバ定義
     const urlData = url.parse(decodeURI(request.url), true);
     const contextPath = urlData.pathname;
     const parameters = urlData.query;
 
     response.writeHead(200, {'Content-Type': 'application/json'});
 
-    if (contextPath === '/run/questions.json') {
+    if (contextPath === '/run/questions.json') {        // 本番の問題
         response.end(readFile('./run/questions.json'));
         console.log('[RUN] Received Question List Request');
-    } else if (contextPath === '/test/questions.json') {
+    } else if (contextPath === '/test/questions.json') {    // テストの問題
         response.end(readFile('./test/questions.json'));
         console.log('[TEST] Received Question List Request')
     }
 
-    if (contextPath === '/run/answer') {
+    if (contextPath === '/run/answer') {        // 本番の回答
         const userName = parameters.user;
         const targetQuestionId = parameters.target*1;
         const answer = parameters.answer;
@@ -42,10 +42,9 @@ const server = http.createServer((request, response) => {
                 break;
             }
         }
-
-
+        
         response.end((isCorrectId&&isCorrectAnswer).toString());
-    } else if (contextPath === '/test/answer') {
+    } else if (contextPath === '/test/answer') {        // テストの回答
         const userName = parameters.user;
         const targetQuestionId = parameters.target*1;
         const answer = parameters.answer;
@@ -72,19 +71,19 @@ const server = http.createServer((request, response) => {
     }
 });
 
-server.listen(80, () => {
+server.listen(80, () => {       // サーバ実行 (80番ポート)
    console.log('Server Running on port 80');
 });
 
-function readFile(path) {
+function readFile(path) {       // ファインを読む関数
     return fs.readFileSync(path, 'utf8');
 }
 
-function writeFile(path, data) {
+function writeFile(path, data) {        // ファインを書く関数
     fs.writeFileSync(path, data, 'utf8');
 }
 
-function processJson(path, data) {
+function processJson(path, data) {      // データをJSONファイルに追加関数
     let buff = readFile(path);
     let jsonBuff = JSON.parse(buff);
 
@@ -93,7 +92,7 @@ function processJson(path, data) {
     writeFile(path, JSON.stringify(jsonBuff));
 }
 
-function convertToAnswerObject(userName, targetQuestionId, answer) {
+function convertToAnswerObject(userName, targetQuestionId, answer) {        // ユーザー名, 問題ID, 回答をJSONオブジェクトに加工する関数
     return {
         "userName": userName,
         "targetQuestion": targetQuestionId,
