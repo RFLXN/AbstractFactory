@@ -1,5 +1,5 @@
 # Abstract Factory
-## Java
+## Java Client
 | QuestionFactory | RunningFactory | TestingFactory | Total 11 Java Classes |
 | --------------- | -------------- | -------------- | ------------------- |
 | SendAnswersCommand | RunningSendAnswersCommand | TestingSendAnswerCommand | (Test.java) |
@@ -11,7 +11,7 @@
 * FindQuestionCommandのgetQuestion(int id)メソッドでNode.jsサーバの"{SERVER_APP_HOME}/run/quesions.json"または"{SERVER_APP_HOME}/test/questions.json"をパーシングして問題の情報を返します。         
 * SendAnswersCommandのsendAnswer(String userName, String answer, int id)メソッドでNode.jsサーバの{SERVER_APP_HOME}/run/answers.json"または{SERVER_APP_HOME}/test/answers.json"に回答を記録し、回答が正しいかが戻されます。
 
-## Node.js (JavaScript)
+## Node.js (JavaScript) Server
 * Node.jsのhttpモジュールでサーバを定義
 * "/run/questions.json"または"/test/questions.json"パスのリクエストをもらった場合
   * readFile(path)関数でJSONファイルを読み込んでクライアントに返す
