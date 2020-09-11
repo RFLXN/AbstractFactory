@@ -20,20 +20,20 @@
   * パラメータをconvertToAnswerObject(userName, targetQuestionId, answer)関数に加工してprocessJson(path, data)関数でanswers.jsonに保存
   * readFile(path)関数で元のJSONファイルのデータを読み込んでパラメータと比較して結果を返す
 
-## Getting Started
+# Getting Started
 1. Javaのcom.googlecode.json-simpleライブラリを追加
 2. ライブラリをクラスパスに追加
 3. Javaファイルをコンパイルする
 4. Node.jsでserver.jsを実行
 5. JavaでTest.javaを実行
 
-## Runtime Environment
+# Runtime Environment
 "/node.js server/server.js" running on Node.js 12.13.1        
 "/java client/Test.java" running on Java8
 
-## Component
+# Component
 
-### Maven Dependency (For JSON jar Library)
+## Maven Dependency (For JSON jar Library)
 FindQuestionCommandのコンパイルのために以下のライブラリをクラスパスに追加してください。      
 [Repository Link](https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple/1.1.1)
 <pre>
@@ -45,7 +45,7 @@ FindQuestionCommandのコンパイルのために以下のライブラリをク�
 </pre>
 
 
-### questions.json Example
+## questions.json Example
 <pre>
 {    
   "questions": [    
@@ -58,7 +58,7 @@ FindQuestionCommandのコンパイルのために以下のライブラリをク�
 }    
 </pre>
 
-### answers.json Example
+## answers.json Example
 <pre>
 {
   "answers": [
