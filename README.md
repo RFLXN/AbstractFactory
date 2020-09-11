@@ -1,4 +1,7 @@
 # Abstract Factory
+QuestionFactoryのgetFactory(String key)クラスメソッドの引数に"running"を入れればRunningFactoryのインスタンスが、     "testing"を入れればTestingFactoryのインスタンスを返します。         
+QuestionFactoryの実装クラスのインスタンスでcreateFindingQuestion(), createSendingAnswers()メソッドで      FindQuestionCommand, SendAnswersCommandの実装クラスをインスタンス化します。      
+
 
 ## Runtime Environment
 "/node.js server/server.js" running on Node.js 12.13.1        
