@@ -4,7 +4,7 @@
 <pre>
 &ltdependency&gt    
   &ltgroupId&gtcom.googlecode.json-simple&lt/groupId&gt    
-    &ltartifactId&gtjson-simple&lt/artifactId&gt
+  &ltartifactId&gtjson-simple&lt/artifactId&gt
   &ltversion>'1.1.1'&lt/version&gt   
 &lt/dependency>
 </pre>
