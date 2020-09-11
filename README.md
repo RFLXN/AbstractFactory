@@ -1,33 +1,28 @@
-# AbstractFactory
+## Maven Dependency (For JSON)
+<pre>
+&ltdependency&gt    
+  &ltgroupId&gtcom.googlecode.json-simple&lt/groupId&gt    
+    &ltartifactId&gtjson-simple&lt/artifactId&gt
+  &ltversion>'1.1.1'&lt/version&gt   
+&lt/dependency>
+</pre>
 
 
+## questions.json Example
+<pre>
+{    
+  "questions": [    
+    {    
+      "id": 1,    
+      "content": "some question3",    
+      "answer": "some answer3"    
+    }    
+  ]    
+}    
+</pre>
 
-// Maven Dependency (For JSON)
-<dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-
-
-//questions.json Example
-{
-  "questions": [
-    {
-      "id": 1,
-      "content": "some question3",
-      "answer": "some answer3"
-    },
-    {
-      "id": 2,
-      "content": "some question2",
-      "answer": "some answer2"
-    }
-  ]
-}
-
-
-//answers.json Example
+## answers.json Example
+<pre>
 {
   "answers": [
     {
@@ -37,3 +32,4 @@
     }
   ]
 }
+</pre>
